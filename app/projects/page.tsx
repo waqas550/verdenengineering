@@ -1,115 +1,116 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Calendar, MapPin, Tag } from 'lucide-react';
+import { Calendar, MapPin } from 'lucide-react';
 
 const projects = [
   {
-    title: 'GreenTech Solar Farm',
-    category: 'Green Energy',
+    title: 'Highway Bridge Infrastructure',
+    category: 'Infrastructure',
     year: '2024',
     location: 'California, USA',
     description:
-      'Large-scale solar energy installation providing 50MW of clean power to residential communities.',
-    image:
-      'https://images.pexels.com/photos/159397/solar-panel-array-power-sun-electricity-159397.jpeg?auto=compress&cs=tinysrgb&w=800',
-  },
-  {
-    title: 'Metropolitan Tower Waterproofing',
-    category: 'Construction Chemicals',
-    year: '2023',
-    location: 'New York, USA',
-    description:
-      'Comprehensive waterproofing solution for a 45-story commercial building using advanced polymer technology.',
-    image:
-      'https://images.pexels.com/photos/936722/pexels-photo-936722.jpeg?auto=compress&cs=tinysrgb&w=800',
-  },
-  {
-    title: 'Industrial Complex Fire Safety',
-    category: 'Fireproofing',
-    year: '2024',
-    location: 'Texas, USA',
-    description:
-      'Complete fire protection system including intumescent coatings and suppression systems for manufacturing facility.',
-    image:
-      'https://images.pexels.com/photos/2219024/pexels-photo-2219024.jpeg?auto=compress&cs=tinysrgb&w=800',
-  },
-  {
-    title: 'Smart Campus Energy Management',
-    category: 'Turnkey Solution',
-    year: '2023',
-    location: 'Boston, USA',
-    description:
-      'Integrated energy management system with solar, storage, and automation for university campus.',
-    image:
-      'https://images.pexels.com/photos/256381/pexels-photo-256381.jpeg?auto=compress&cs=tinysrgb&w=800',
-  },
-  {
-    title: 'Coastal Resort Sustainable Design',
-    category: 'Engineering Consultancy',
-    year: '2024',
-    location: 'Florida, USA',
-    description:
-      'Sustainability consulting and feasibility study for eco-friendly resort development.',
-    image:
-      'https://images.pexels.com/photos/261102/pexels-photo-261102.jpeg?auto=compress&cs=tinysrgb&w=800',
-  },
-  {
-    title: 'Bridge Infrastructure Protection',
-    category: 'Construction Chemicals',
-    year: '2023',
-    location: 'Oregon, USA',
-    description:
-      'Structural repair and protective coating application for highway bridge restoration project.',
+      'Large-scale bridge engineering and construction spanning 2.5km across valley with advanced structural design.',
     image:
       'https://images.pexels.com/photos/327502/pexels-photo-327502.jpeg?auto=compress&cs=tinysrgb&w=800',
   },
   {
-    title: 'Hybrid Energy Microgrid',
-    category: 'Green Energy',
+    title: 'Renewable Energy Farm',
+    category: 'Energy',
     year: '2024',
     location: 'Arizona, USA',
     description:
-      'Off-grid hybrid solar and wind energy system with battery storage for remote mining operation.',
+      '50MW solar and wind hybrid energy generation facility with battery storage integration.',
     image:
-      'https://images.pexels.com/photos/433308/pexels-photo-433308.jpeg?auto=compress&cs=tinysrgb&w=800',
+      'https://images.pexels.com/photos/159397/solar-panel-array-power-sun-electricity-159397.jpeg?auto=compress&cs=tinysrgb&w=800',
   },
   {
-    title: 'Hospital Fire & Safety Upgrade',
-    category: 'Fireproofing',
+    title: 'Manufacturing Plant Automation',
+    category: 'Industrial',
     year: '2023',
+    location: 'Ohio, USA',
+    description:
+      'Complete industrial automation system with IoT integration and real-time monitoring.',
+    image:
+      'https://images.pexels.com/photos/3862130/pexels-photo-3862130.jpeg?auto=compress&cs=tinysrgb&w=800',
+  },
+  {
+    title: 'Commercial Complex Development',
+    category: 'Construction',
+    year: '2023',
+    location: 'New York, USA',
+    description:
+      '45-story commercial building with advanced structural engineering and sustainable systems.',
+    image:
+      'https://images.pexels.com/photos/936722/pexels-photo-936722.jpeg?auto=compress&cs=tinysrgb&w=800',
+  },
+  {
+    title: 'Precision Hydraulic Systems',
+    category: 'Mechanical',
+    year: '2024',
+    location: 'Texas, USA',
+    description:
+      'Custom hydraulic system design and installation for heavy industrial equipment.',
+    image:
+      'https://images.pexels.com/photos/3862129/pexels-photo-3862129.jpeg?auto=compress&cs=tinysrgb&w=800',
+  },
+  {
+    title: 'Airport Terminal Project',
+    category: 'Project Delivery',
+    year: '2023',
+    location: 'Florida, USA',
+    description:
+      'Integrated project delivery for major airport terminal expansion and modernization.',
+    image:
+      'https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=800',
+  },
+  {
+    title: 'Water Treatment Facility',
+    category: 'Infrastructure',
+    year: '2024',
     location: 'Illinois, USA',
     description:
-      'Comprehensive fire safety system upgrade including detection, suppression, and emergency systems.',
+      'Advanced water purification and treatment system with environmental compliance.',
     image:
-      'https://images.pexels.com/photos/668300/pexels-photo-668300.jpeg?auto=compress&cs=tinysrgb&w=800',
+      'https://images.pexels.com/photos/3218546/pexels-photo-3218546.jpeg?auto=compress&cs=tinysrgb&w=800',
   },
   {
-    title: 'Sustainable Office Complex',
-    category: 'Turnkey Solution',
-    year: '2024',
+    title: 'Smart Grid Distribution Network',
+    category: 'Energy',
+    year: '2023',
     location: 'Washington, USA',
     description:
-      'Full-service design and construction of LEED-certified office building with green technologies.',
+      'Intelligent power distribution network with AI optimization and real-time control.',
     image:
-      'https://images.pexels.com/photos/830891/pexels-photo-830891.jpeg?auto=compress&cs=tinysrgb&w=800',
+      'https://images.pexels.com/photos/208612/pexels-photo-208612.jpeg?auto=compress&cs=tinysrgb&w=800',
+  },
+  {
+    title: 'Logistics Hub Construction',
+    category: 'Construction',
+    year: '2024',
+    location: 'Nevada, USA',
+    description:
+      'Large-scale logistics facility with advanced construction techniques and automation.',
+    image:
+      'https://images.pexels.com/photos/3862131/pexels-photo-3862131.jpeg?auto=compress&cs=tinysrgb&w=800',
   },
 ];
 
 const categories = [
   'All',
-  'Green Energy',
-  'Construction Chemicals',
-  'Fireproofing',
-  'Engineering Consultancy',
-  'Turnkey Solution',
+  'Infrastructure',
+  'Energy',
+  'Industrial',
+  'Construction',
+  'Mechanical',
+  'Project Delivery',
 ];
 
 export default function ProjectsPage() {
   return (
     <div className="pt-16 md:pt-20">
-      <section className="relative bg-gradient-to-br from-green-700 to-green-900 text-white py-20">
-        <div className="absolute inset-0 bg-[url('https://images.pexels.com/photos/3862130/pexels-photo-3862130.jpeg?auto=compress&cs=tinysrgb&w=1920')] bg-cover bg-center opacity-10"></div>
+      <section className="relative bg-gradient-to-br from-blue-900 to-blue-800 text-white py-20">
+        <div className="absolute inset-0 bg-[url('https://images.pexels.com/photos/3862130/pexels-photo-3862130.jpeg?auto=compress&cs=tinysrgb&w=1920')] bg-cover bg-center opacity-5"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -120,9 +121,8 @@ export default function ProjectsPage() {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
               Our Projects
             </h1>
-            <p className="text-xl text-green-100 max-w-3xl mx-auto">
-              Showcasing excellence in sustainable engineering across diverse
-              industries
+            <p className="text-xl text-blue-100 max-w-3xl mx-auto">
+              Showcasing engineering excellence across all domains
             </p>
           </motion.div>
         </div>
@@ -143,7 +143,7 @@ export default function ProjectsPage() {
                   key={index}
                   className={`px-6 py-2 rounded-full font-medium transition-all ${
                     index === 0
-                      ? 'bg-green-600 text-white shadow-lg'
+                      ? 'bg-blue-900 text-white shadow-lg'
                       : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                   }`}
                 >
@@ -171,27 +171,27 @@ export default function ProjectsPage() {
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                   />
                   <div className="absolute top-4 right-4">
-                    <span className="bg-green-600 text-white px-3 py-1 rounded-full text-sm font-medium">
+                    <span className="bg-blue-900 text-white px-3 py-1 rounded-full text-sm font-medium">
                       {project.category}
                     </span>
                   </div>
                 </div>
 
                 <div className="p-6">
-                  <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-green-600 transition-colors">
+                  <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-900 transition-colors">
                     {project.title}
                   </h3>
-                  <p className="text-gray-600 mb-4 line-clamp-2">
+                  <p className="text-gray-600 mb-4 line-clamp-2 text-sm">
                     {project.description}
                   </p>
 
                   <div className="space-y-2">
                     <div className="flex items-center text-sm text-gray-500">
-                      <MapPin className="w-4 h-4 mr-2 text-green-600" />
+                      <MapPin className="w-4 h-4 mr-2 text-blue-900" />
                       {project.location}
                     </div>
                     <div className="flex items-center text-sm text-gray-500">
-                      <Calendar className="w-4 h-4 mr-2 text-green-600" />
+                      <Calendar className="w-4 h-4 mr-2 text-blue-900" />
                       Completed {project.year}
                     </div>
                   </div>
@@ -216,23 +216,23 @@ export default function ProjectsPage() {
             </h2>
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
               <div className="bg-white rounded-xl p-8 shadow-lg">
-                <div className="text-4xl md:text-5xl font-bold text-green-600 mb-2">
-                  150+
+                <div className="text-4xl md:text-5xl font-bold text-blue-900 mb-2">
+                  500+
                 </div>
                 <div className="text-gray-600 font-medium">
                   Completed Projects
                 </div>
               </div>
               <div className="bg-white rounded-xl p-8 shadow-lg">
-                <div className="text-4xl md:text-5xl font-bold text-green-600 mb-2">
-                  50MW
+                <div className="text-4xl md:text-5xl font-bold text-blue-900 mb-2">
+                  1.2B
                 </div>
                 <div className="text-gray-600 font-medium">
-                  Green Energy Installed
+                  Total Project Value
                 </div>
               </div>
               <div className="bg-white rounded-xl p-8 shadow-lg">
-                <div className="text-4xl md:text-5xl font-bold text-green-600 mb-2">
+                <div className="text-4xl md:text-5xl font-bold text-blue-900 mb-2">
                   98%
                 </div>
                 <div className="text-gray-600 font-medium">
@@ -240,7 +240,7 @@ export default function ProjectsPage() {
                 </div>
               </div>
               <div className="bg-white rounded-xl p-8 shadow-lg">
-                <div className="text-4xl md:text-5xl font-bold text-green-600 mb-2">
+                <div className="text-4xl md:text-5xl font-bold text-blue-900 mb-2">
                   15+
                 </div>
                 <div className="text-gray-600 font-medium">
@@ -248,25 +248,6 @@ export default function ProjectsPage() {
                 </div>
               </div>
             </div>
-          </motion.div>
-        </div>
-      </section>
-
-      <section className="py-20 bg-green-600 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Ready to Start Your Next Project?
-            </h2>
-            <p className="text-xl text-green-100 mb-8 max-w-2xl mx-auto">
-              Let&apos;s collaborate to bring your vision to life with our
-              proven expertise and commitment to excellence.
-            </p>
           </motion.div>
         </div>
       </section>

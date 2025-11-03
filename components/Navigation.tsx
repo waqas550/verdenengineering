@@ -3,13 +3,14 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Menu, X, Leaf } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const navLinks = [
   { name: 'Home', path: '/' },
   { name: 'About', path: '/about' },
   { name: 'Services', path: '/services' },
+  { name: 'Products', path: '/products' },
   { name: 'Projects', path: '/projects' },
   { name: 'Contact', path: '/contact' },
 ];
@@ -39,13 +40,18 @@ export default function Navigation() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16 md:h-20">
-          <Link href="/" className="flex items-center space-x-2 group">
-            <div className="bg-green-600 p-2 rounded-lg group-hover:bg-green-700 transition-colors">
-              <Leaf className="w-6 h-6 text-white" />
+          <Link href="/" className="flex items-center space-x-3 group">
+            <div className="relative w-10 h-10">
+              <svg viewBox="0 0 100 100" className="w-full h-full" fill="none">
+                <circle cx="50" cy="50" r="45" className="fill-blue-900"/>
+                <circle cx="50" cy="50" r="40" className="fill-white"/>
+                <polygon points="50,25 65,45 35,45" className="fill-blue-900"/>
+                <polygon points="50,75 35,55 65,55" className="fill-gray-500"/>
+              </svg>
             </div>
             <div>
-              <span className="text-xl font-bold text-gray-900">Verden</span>
-              <span className="text-sm text-gray-600 block leading-none">
+              <span className="text-xl font-bold text-blue-900">Verden</span>
+              <span className="text-xs text-gray-600 block leading-tight">
                 Engineering
               </span>
             </div>
@@ -58,8 +64,8 @@ export default function Navigation() {
                 href={link.path}
                 className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
                   pathname === link.path
-                    ? 'text-green-600 bg-green-50'
-                    : 'text-gray-700 hover:text-green-600 hover:bg-gray-50'
+                    ? 'text-blue-900 bg-blue-50'
+                    : 'text-gray-700 hover:text-blue-900 hover:bg-gray-50'
                 }`}
               >
                 {link.name}
@@ -67,7 +73,7 @@ export default function Navigation() {
             ))}
             <Link
               href="/contact"
-              className="ml-4 px-6 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors font-medium"
+              className="ml-4 px-6 py-2 bg-blue-900 text-white rounded-lg hover:bg-blue-950 transition-colors font-medium"
             >
               Get Quote
             </Link>
@@ -102,7 +108,7 @@ export default function Navigation() {
                   href={link.path}
                   className={`block px-4 py-3 rounded-lg text-sm font-medium transition-colors ${
                     pathname === link.path
-                      ? 'text-green-600 bg-green-50'
+                      ? 'text-blue-900 bg-blue-50'
                       : 'text-gray-700 hover:bg-gray-50'
                   }`}
                 >
@@ -111,7 +117,7 @@ export default function Navigation() {
               ))}
               <Link
                 href="/contact"
-                className="block px-4 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors font-medium text-center"
+                className="block px-4 py-3 bg-blue-900 text-white rounded-lg hover:bg-blue-950 transition-colors font-medium text-center"
               >
                 Get Quote
               </Link>

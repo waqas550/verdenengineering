@@ -37,8 +37,8 @@ export default function ContactPage() {
 
   return (
     <div className="pt-16 md:pt-20">
-      <section className="relative bg-gradient-to-br from-green-700 to-green-900 text-white py-20">
-        <div className="absolute inset-0 bg-[url('https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=1920')] bg-cover bg-center opacity-10"></div>
+      <section className="relative bg-gradient-to-br from-blue-900 to-blue-800 text-white py-20">
+        <div className="absolute inset-0 bg-[url('https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=1920')] bg-cover bg-center opacity-5"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -49,8 +49,8 @@ export default function ContactPage() {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
               Get In Touch
             </h1>
-            <p className="text-xl text-green-100 max-w-3xl mx-auto">
-              Let&apos;s discuss how we can help with your engineering needs
+            <p className="text-xl text-blue-100 max-w-3xl mx-auto">
+              Let's discuss how we can partner on your engineering projects
             </p>
           </motion.div>
         </div>
@@ -69,8 +69,7 @@ export default function ContactPage() {
                 Send Us a Message
               </h2>
               <p className="text-gray-600 mb-8">
-                Fill out the form below and our team will get back to you within
-                24 hours.
+                Fill out the form below and our team will get back to you within 24 hours.
               </p>
 
               <form onSubmit={handleSubmit} className="space-y-6">
@@ -88,7 +87,7 @@ export default function ContactPage() {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent transition-all"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-900 focus:border-transparent transition-all"
                     placeholder="John Doe"
                   />
                 </div>
@@ -107,7 +106,7 @@ export default function ContactPage() {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent transition-all"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-900 focus:border-transparent transition-all"
                     placeholder="john@example.com"
                   />
                 </div>
@@ -125,7 +124,7 @@ export default function ContactPage() {
                     name="phone"
                     value={formData.phone}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent transition-all"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-900 focus:border-transparent transition-all"
                     placeholder="+1 (555) 123-4567"
                   />
                 </div>
@@ -144,14 +143,14 @@ export default function ContactPage() {
                     onChange={handleChange}
                     required
                     rows={6}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent transition-all resize-none"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-900 focus:border-transparent transition-all resize-none"
                     placeholder="Tell us about your project..."
                   ></textarea>
                 </div>
 
                 <button
                   type="submit"
-                  className="w-full bg-green-600 text-white px-8 py-4 rounded-lg hover:bg-green-700 transition-all transform hover:scale-105 font-medium shadow-lg flex items-center justify-center"
+                  className="w-full bg-blue-900 text-white px-8 py-4 rounded-lg hover:bg-blue-950 transition-all transform hover:scale-105 font-medium shadow-lg flex items-center justify-center"
                 >
                   Send Message
                   <Send className="ml-2 w-5 h-5" />
@@ -176,8 +175,8 @@ export default function ContactPage() {
 
                 <div className="space-y-6">
                   <div className="flex items-start space-x-4">
-                    <div className="bg-green-100 p-3 rounded-lg">
-                      <MapPin className="w-6 h-6 text-green-600" />
+                    <div className="bg-blue-100 p-3 rounded-lg">
+                      <MapPin className="w-6 h-6 text-blue-900" />
                     </div>
                     <div>
                       <h3 className="font-semibold text-gray-900 mb-1">
@@ -194,8 +193,8 @@ export default function ContactPage() {
                   </div>
 
                   <div className="flex items-start space-x-4">
-                    <div className="bg-green-100 p-3 rounded-lg">
-                      <Phone className="w-6 h-6 text-green-600" />
+                    <div className="bg-blue-100 p-3 rounded-lg">
+                      <Phone className="w-6 h-6 text-blue-900" />
                     </div>
                     <div>
                       <h3 className="font-semibold text-gray-900 mb-1">
@@ -207,8 +206,8 @@ export default function ContactPage() {
                   </div>
 
                   <div className="flex items-start space-x-4">
-                    <div className="bg-green-100 p-3 rounded-lg">
-                      <Mail className="w-6 h-6 text-green-600" />
+                    <div className="bg-blue-100 p-3 rounded-lg">
+                      <Mail className="w-6 h-6 text-blue-900" />
                     </div>
                     <div>
                       <h3 className="font-semibold text-gray-900 mb-1">
@@ -222,8 +221,8 @@ export default function ContactPage() {
                   </div>
 
                   <div className="flex items-start space-x-4">
-                    <div className="bg-green-100 p-3 rounded-lg">
-                      <Clock className="w-6 h-6 text-green-600" />
+                    <div className="bg-blue-100 p-3 rounded-lg">
+                      <Clock className="w-6 h-6 text-blue-900" />
                     </div>
                     <div>
                       <h3 className="font-semibold text-gray-900 mb-1">
@@ -248,7 +247,7 @@ export default function ContactPage() {
                     href="https://linkedin.com"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="bg-gray-100 p-3 rounded-lg hover:bg-green-600 hover:text-white transition-all group"
+                    className="bg-gray-100 p-3 rounded-lg hover:bg-blue-900 hover:text-white transition-all group"
                   >
                     <Linkedin className="w-6 h-6" />
                   </a>
@@ -256,7 +255,7 @@ export default function ContactPage() {
                     href="https://facebook.com"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="bg-gray-100 p-3 rounded-lg hover:bg-green-600 hover:text-white transition-all group"
+                    className="bg-gray-100 p-3 rounded-lg hover:bg-blue-900 hover:text-white transition-all group"
                   >
                     <Facebook className="w-6 h-6" />
                   </a>
@@ -264,7 +263,7 @@ export default function ContactPage() {
                     href="https://instagram.com"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="bg-gray-100 p-3 rounded-lg hover:bg-green-600 hover:text-white transition-all group"
+                    className="bg-gray-100 p-3 rounded-lg hover:bg-blue-900 hover:text-white transition-all group"
                   >
                     <Instagram className="w-6 h-6" />
                   </a>
@@ -276,8 +275,7 @@ export default function ContactPage() {
                   Request a Quote
                 </h3>
                 <p className="text-gray-600 mb-4">
-                  Looking for a detailed quote for your project? Our team will
-                  provide you with a comprehensive proposal.
+                  Looking for a detailed quote for your project? Our team will provide you with a comprehensive proposal.
                 </p>
                 <button className="w-full bg-gray-900 text-white px-6 py-3 rounded-lg hover:bg-gray-800 transition-all font-medium">
                   Get Free Quote

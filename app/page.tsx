@@ -3,56 +3,61 @@
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import {
-  Sun,
   Building2,
-  Flame,
-  ClipboardCheck,
+  Zap,
+  Factory,
   Wrench,
+  Cable,
+  Hammer,
   ArrowRight,
   CheckCircle2,
-  Leaf,
 } from 'lucide-react';
 
-const services = [
+const domains = [
   {
-    icon: Sun,
-    title: 'Green Energy Solutions',
-    description: 'Solar, hybrid, and renewable energy systems',
+    icon: Cable,
+    title: 'Infrastructure',
+    description: 'Advanced infrastructure solutions',
+  },
+  {
+    icon: Zap,
+    title: 'Energy',
+    description: 'Power and renewable systems',
+  },
+  {
+    icon: Factory,
+    title: 'Industrial',
+    description: 'Manufacturing and industrial solutions',
   },
   {
     icon: Building2,
-    title: 'Construction Chemicals',
-    description: 'Waterproofing, sealants, coatings, and admixtures',
-  },
-  {
-    icon: Flame,
-    title: 'Fireproofing',
-    description: 'Fire-retardant paints, insulation, and safety systems',
-  },
-  {
-    icon: ClipboardCheck,
-    title: 'Engineering Consultancy',
-    description: 'Feasibility studies and sustainability audits',
+    title: 'Construction',
+    description: 'Building and civil engineering',
   },
   {
     icon: Wrench,
-    title: 'Turnkey Solutions',
-    description: 'Design to installation and maintenance',
+    title: 'Mechanical',
+    description: 'Mechanical systems and design',
+  },
+  {
+    icon: Hammer,
+    title: 'Project Delivery',
+    description: 'End-to-end project management',
   },
 ];
 
 const values = [
-  'Sustainable Innovation',
-  'Quality Excellence',
-  'Client-Focused Solutions',
-  'Environmental Responsibility',
+  'Engineering Excellence',
+  'Multi-Domain Expertise',
+  'Innovative Solutions',
+  'Client Partnership',
 ];
 
 export default function Home() {
   return (
     <div className="pt-16 md:pt-20">
-      <section className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-green-900 text-white overflow-hidden">
-        <div className="absolute inset-0 bg-[url('https://images.pexels.com/photos/325229/pexels-photo-325229.jpeg?auto=compress&cs=tinysrgb&w=1920')] bg-cover bg-center opacity-10"></div>
+      <section className="relative bg-gradient-to-br from-blue-900 via-blue-800 to-gray-800 text-white overflow-hidden">
+        <div className="absolute inset-0 bg-[url('https://images.pexels.com/photos/325229/pexels-photo-325229.jpeg?auto=compress&cs=tinysrgb&w=1920')] bg-cover bg-center opacity-5"></div>
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32">
           <motion.div
@@ -67,30 +72,30 @@ export default function Home() {
               transition={{ delay: 0.2, type: 'spring', stiffness: 200 }}
               className="inline-block mb-6"
             >
-              <div className="bg-green-600/20 backdrop-blur-sm border border-green-500/30 rounded-full px-6 py-2">
-                <span className="text-green-400 font-medium">
-                  Engineering a Sustainable Future
+              <div className="bg-blue-700/20 backdrop-blur-sm border border-blue-400/30 rounded-full px-6 py-2">
+                <span className="text-blue-200 font-medium">
+                  Multi-Domain Engineering Excellence
                 </span>
               </div>
             </motion.div>
 
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
-              Welcome to{' '}
-              <span className="text-green-400">Verden Engineering</span>
+              Engineering Solutions Across All
+              <span className="text-blue-300"> Sectors</span>
             </h1>
 
-            <p className="text-lg md:text-xl text-gray-300 mb-8 leading-relaxed">
-              Innovative engineering and sustainability solutions in green
-              energy, construction chemicals, fireproof materials, and
-              engineering consultancy.
+            <p className="text-lg md:text-xl text-blue-100 mb-8 leading-relaxed">
+              Verden Engineering delivers comprehensive, innovative solutions
+              across infrastructure, energy, industrial, and construction
+              domains.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/services"
-                className="inline-flex items-center justify-center px-8 py-4 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-all transform hover:scale-105 font-medium shadow-lg"
+                className="inline-flex items-center justify-center px-8 py-4 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-all transform hover:scale-105 font-medium shadow-lg"
               >
-                Explore Services
+                Explore Solutions
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
               <Link
@@ -127,16 +132,16 @@ export default function Home() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <div className="inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-full mb-4">
-              <Leaf className="w-8 h-8 text-green-600" />
+            <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-4">
+              <Building2 className="w-8 h-8 text-blue-900" />
             </div>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               About Verden
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Derived from Scandinavian roots, <strong>Verden</strong> means{' '}
-              <em>&ldquo;The World&rdquo;</em> — representing our commitment to
-              sustainability and global innovation.
+              A forward-thinking engineering company delivering specialized
+              solutions across multiple domains with over 15 years of industry
+              expertise.
             </p>
           </motion.div>
 
@@ -149,8 +154,8 @@ export default function Home() {
             >
               <div className="relative h-[400px] rounded-2xl overflow-hidden shadow-2xl">
                 <img
-                  src="https://images.pexels.com/photos/1108572/pexels-photo-1108572.jpeg?auto=compress&cs=tinysrgb&w=800"
-                  alt="Solar panels and sustainable energy"
+                  src="https://images.pexels.com/photos/3216510/pexels-photo-3216510.jpeg?auto=compress&cs=tinysrgb&w=800"
+                  alt="Engineering solutions"
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -163,13 +168,13 @@ export default function Home() {
               transition={{ duration: 0.6, delay: 0.2 }}
             >
               <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                Innovation Meets Sustainability
+                Multi-Domain Engineering Expertise
               </h3>
               <p className="text-gray-600 mb-6 leading-relaxed">
-                Verden Engineering is an innovative engineering and
-                sustainability company offering eco-friendly, high-performance
-                solutions. We specialize in green energy, construction
-                chemicals, fireproof materials, and engineering consultancy.
+                Verden Engineering specializes in delivering comprehensive
+                solutions across infrastructure, energy, industrial, and
+                construction sectors. Our integrated approach ensures seamless
+                execution and superior results.
               </p>
               <div className="space-y-3">
                 {values.map((value, index) => (
@@ -181,14 +186,14 @@ export default function Home() {
                     transition={{ delay: index * 0.1 }}
                     className="flex items-center space-x-3"
                   >
-                    <CheckCircle2 className="w-5 h-5 text-green-600 flex-shrink-0" />
+                    <CheckCircle2 className="w-5 h-5 text-blue-900 flex-shrink-0" />
                     <span className="text-gray-700">{value}</span>
                   </motion.div>
                 ))}
               </div>
               <Link
                 href="/about"
-                className="inline-flex items-center mt-6 text-green-600 hover:text-green-700 font-medium"
+                className="inline-flex items-center mt-6 text-blue-900 hover:text-blue-950 font-medium"
               >
                 Learn more about us
                 <ArrowRight className="ml-2 w-5 h-5" />
@@ -208,16 +213,15 @@ export default function Home() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Our Services
+              Our Domains
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Comprehensive engineering solutions designed for a sustainable
-              future
+              Comprehensive engineering across diverse sectors
             </p>
           </motion.div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service, index) => (
+            {domains.map((domain, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 30 }}
@@ -227,13 +231,13 @@ export default function Home() {
                 whileHover={{ y: -8 }}
                 className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-all group cursor-pointer"
               >
-                <div className="bg-green-100 w-14 h-14 rounded-lg flex items-center justify-center mb-6 group-hover:bg-green-600 transition-colors">
-                  <service.icon className="w-7 h-7 text-green-600 group-hover:text-white transition-colors" />
+                <div className="bg-blue-100 w-14 h-14 rounded-lg flex items-center justify-center mb-6 group-hover:bg-blue-900 transition-colors">
+                  <domain.icon className="w-7 h-7 text-blue-900 group-hover:text-white transition-colors" />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">
-                  {service.title}
+                  {domain.title}
                 </h3>
-                <p className="text-gray-600">{service.description}</p>
+                <p className="text-gray-600">{domain.description}</p>
               </motion.div>
             ))}
           </div>
@@ -246,16 +250,16 @@ export default function Home() {
           >
             <Link
               href="/services"
-              className="inline-flex items-center px-8 py-4 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-all transform hover:scale-105 font-medium shadow-lg"
+              className="inline-flex items-center px-8 py-4 bg-blue-900 text-white rounded-lg hover:bg-blue-950 transition-all transform hover:scale-105 font-medium shadow-lg"
             >
-              View All Services
+              Explore All Services
               <ArrowRight className="ml-2 w-5 h-5" />
             </Link>
           </motion.div>
         </div>
       </section>
 
-      <section className="py-20 bg-green-600 text-white">
+      <section className="py-20 bg-blue-900 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -264,15 +268,15 @@ export default function Home() {
             transition={{ duration: 0.6 }}
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Ready to Start Your Project?
+              Ready to Partner with Us?
             </h2>
-            <p className="text-xl text-green-100 mb-8 max-w-2xl mx-auto">
-              Let&apos;s work together to create sustainable engineering
-              solutions for your needs.
+            <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+              Let&apos;s collaborate to deliver comprehensive engineering
+              solutions across all domains.
             </p>
             <Link
               href="/contact"
-              className="inline-flex items-center px-8 py-4 bg-white text-green-600 rounded-lg hover:bg-gray-100 transition-all transform hover:scale-105 font-medium shadow-lg"
+              className="inline-flex items-center px-8 py-4 bg-white text-blue-900 rounded-lg hover:bg-gray-100 transition-all transform hover:scale-105 font-medium shadow-lg"
             >
               Contact Us Today
               <ArrowRight className="ml-2 w-5 h-5" />

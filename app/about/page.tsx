@@ -8,25 +8,25 @@ const values = [
     icon: Lightbulb,
     title: 'Innovation',
     description:
-      'Pioneering sustainable engineering solutions through cutting-edge technology and creative problem-solving.',
+      'Pioneering engineering solutions through cutting-edge technology and creative problem-solving.',
   },
   {
     icon: Award,
-    title: 'Quality Excellence',
+    title: 'Excellence',
     description:
-      'Unwavering commitment to delivering superior products and services that exceed industry standards.',
+      'Unwavering commitment to delivering superior products and services.',
   },
   {
     icon: Users,
-    title: 'Client Focus',
+    title: 'Collaboration',
     description:
-      'Building lasting partnerships by understanding and addressing unique client needs with tailored solutions.',
+      'Building lasting partnerships by understanding and addressing unique client needs.',
   },
   {
     icon: Globe,
-    title: 'Sustainability',
+    title: 'Integrity',
     description:
-      'Environmental responsibility at the core of every project, ensuring a greener future for generations.',
+      'Operating with transparency, honesty, and professional responsibility.',
   },
 ];
 
@@ -48,7 +48,7 @@ const leadership = [
   },
   {
     name: 'Emily Rodriguez',
-    role: 'Sustainability Director',
+    role: 'Head of Operations',
     image: 'https://images.pexels.com/photos/3756681/pexels-photo-3756681.jpeg?auto=compress&cs=tinysrgb&w=400',
   },
 ];
@@ -56,8 +56,8 @@ const leadership = [
 export default function AboutPage() {
   return (
     <div className="pt-16 md:pt-20">
-      <section className="relative bg-gradient-to-br from-green-700 to-green-900 text-white py-20">
-        <div className="absolute inset-0 bg-[url('https://images.pexels.com/photos/3184306/pexels-photo-3184306.jpeg?auto=compress&cs=tinysrgb&w=1920')] bg-cover bg-center opacity-10"></div>
+      <section className="relative bg-gradient-to-br from-blue-900 to-blue-800 text-white py-20">
+        <div className="absolute inset-0 bg-[url('https://images.pexels.com/photos/3184306/pexels-photo-3184306.jpeg?auto=compress&cs=tinysrgb&w=1920')] bg-cover bg-center opacity-5"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -68,9 +68,8 @@ export default function AboutPage() {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
               About Verden Engineering
             </h1>
-            <p className="text-xl text-green-100 max-w-3xl mx-auto">
-              Engineering a sustainable future through innovation, excellence,
-              and environmental responsibility.
+            <p className="text-xl text-blue-100 max-w-3xl mx-auto">
+              Multi-domain engineering excellence delivering innovative solutions worldwide.
             </p>
           </motion.div>
         </div>
@@ -86,24 +85,16 @@ export default function AboutPage() {
               transition={{ duration: 0.6 }}
             >
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                The Meaning of Verden
+                Who We Are
               </h2>
               <p className="text-lg text-gray-600 mb-4 leading-relaxed">
-                Derived from Scandinavian roots, <strong>Verden</strong> means{' '}
-                <em>&ldquo;The World&rdquo;</em> — a name that reflects our
-                global vision and commitment to making a positive impact on the
-                planet.
+                Verden Engineering is a forward-thinking, multi-domain engineering company with over 15 years of industry experience. We specialize in delivering comprehensive engineering solutions across infrastructure, energy, industrial, construction, and mechanical domains.
               </p>
               <p className="text-lg text-gray-600 mb-4 leading-relaxed">
-                We believe that engineering excellence should serve not just our
-                clients, but the entire world. Our name embodies our mission to
-                create solutions that transcend borders and contribute to a more
-                sustainable, efficient, and innovative global community.
+                Our team of expert engineers combines deep technical knowledge with innovative thinking to solve complex engineering challenges. We are committed to delivering exceptional value to our clients through quality, reliability, and continuous improvement.
               </p>
               <p className="text-lg text-gray-600 leading-relaxed">
-                Every project we undertake is guided by this principle —
-                thinking globally while acting locally, ensuring that our work
-                today builds a better tomorrow for everyone.
+                From concept to completion, we partner with organizations to realize their engineering ambitions with precision and expertise.
               </p>
             </motion.div>
 
@@ -115,8 +106,8 @@ export default function AboutPage() {
             >
               <div className="relative h-[500px] rounded-2xl overflow-hidden shadow-2xl">
                 <img
-                  src="https://images.pexels.com/photos/335393/pexels-photo-335393.jpeg?auto=compress&cs=tinysrgb&w=800"
-                  alt="World and sustainability"
+                  src="https://images.pexels.com/photos/3184306/pexels-photo-3184306.jpeg?auto=compress&cs=tinysrgb&w=800"
+                  alt="Engineering team collaboration"
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -135,18 +126,14 @@ export default function AboutPage() {
               transition={{ duration: 0.6 }}
               className="bg-white rounded-2xl p-8 shadow-lg"
             >
-              <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mb-6">
-                <Target className="w-8 h-8 text-green-600" />
+              <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                <Target className="w-8 h-8 text-blue-900" />
               </div>
               <h3 className="text-2xl font-bold text-gray-900 mb-4">
                 Our Mission
               </h3>
               <p className="text-gray-600 leading-relaxed">
-                To deliver innovative, sustainable engineering solutions that
-                empower businesses and communities to thrive while preserving
-                our planet. We are committed to excellence in green energy,
-                construction technology, and safety systems that set new
-                industry standards.
+                To deliver innovative, reliable engineering solutions across multiple domains, empowering organizations to achieve their operational and strategic objectives through technical excellence and partnership.
               </p>
             </motion.div>
 
@@ -157,18 +144,14 @@ export default function AboutPage() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="bg-white rounded-2xl p-8 shadow-lg"
             >
-              <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mb-6">
-                <Eye className="w-8 h-8 text-green-600" />
+              <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                <Eye className="w-8 h-8 text-blue-900" />
               </div>
               <h3 className="text-2xl font-bold text-gray-900 mb-4">
                 Our Vision
               </h3>
               <p className="text-gray-600 leading-relaxed">
-                To be the global leader in sustainable engineering solutions,
-                recognized for transforming industries through innovation,
-                environmental stewardship, and unwavering commitment to quality.
-                We envision a world where every project contributes to a cleaner,
-                safer, and more efficient future.
+                To be the preferred engineering partner globally, recognized for innovation, reliability, and our ability to deliver transformative solutions across all engineering domains.
               </p>
             </motion.div>
           </div>
@@ -202,8 +185,8 @@ export default function AboutPage() {
                 transition={{ delay: index * 0.1 }}
                 className="text-center"
               >
-                <div className="bg-green-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <value.icon className="w-10 h-10 text-green-600" />
+                <div className="bg-blue-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <value.icon className="w-10 h-10 text-blue-900" />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">
                   {value.title}
@@ -228,7 +211,7 @@ export default function AboutPage() {
               Our Leadership Team
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Experienced professionals dedicated to engineering excellence
+              Experienced professionals leading engineering innovation
             </p>
           </motion.div>
 
@@ -253,7 +236,7 @@ export default function AboutPage() {
                   <h3 className="text-xl font-bold text-gray-900 mb-1">
                     {member.name}
                   </h3>
-                  <p className="text-green-600 font-medium">{member.role}</p>
+                  <p className="text-blue-900 font-medium">{member.role}</p>
                 </div>
               </motion.div>
             ))}
@@ -261,7 +244,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="py-20 bg-green-600 text-white">
+      <section className="py-20 bg-blue-900 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -271,22 +254,34 @@ export default function AboutPage() {
             className="text-center"
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Our Story
+              Our Track Record
             </h2>
-            <p className="text-xl text-green-100 max-w-4xl mx-auto leading-relaxed mb-8">
-              Founded with a vision to revolutionize the engineering industry,
-              Verden Engineering has grown from a small team of passionate
-              engineers to a comprehensive solutions provider. Our journey has
-              been marked by continuous innovation, strategic partnerships, and
-              an unwavering commitment to sustainability.
-            </p>
-            <p className="text-lg text-green-100 max-w-4xl mx-auto leading-relaxed">
-              Today, we serve clients across multiple sectors, delivering
-              turnkey solutions in green energy, construction chemicals,
-              fireproofing, and engineering consultancy. Every project reflects
-              our dedication to quality, safety, and environmental
-              responsibility.
-            </p>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-12">
+              <div>
+                <div className="text-4xl font-bold text-blue-300 mb-2">
+                  15+
+                </div>
+                <div className="text-blue-100">Years of Excellence</div>
+              </div>
+              <div>
+                <div className="text-4xl font-bold text-blue-300 mb-2">
+                  500+
+                </div>
+                <div className="text-blue-100">Projects Delivered</div>
+              </div>
+              <div>
+                <div className="text-4xl font-bold text-blue-300 mb-2">
+                  98%
+                </div>
+                <div className="text-blue-100">Client Satisfaction</div>
+              </div>
+              <div>
+                <div className="text-4xl font-bold text-blue-300 mb-2">
+                  6+
+                </div>
+                <div className="text-blue-100">Engineering Domains</div>
+              </div>
+            </div>
           </motion.div>
         </div>
       </section>
