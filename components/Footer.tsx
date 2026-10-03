@@ -1,163 +1,74 @@
-import Link from 'next/link';
-import { Mail, Phone, MapPin, Linkedin, Facebook, Instagram } from 'lucide-react';
+import Link from "next/link";
+import { partners, services, siteConfig } from "@/data/siteConfig";
 
-export default function Footer() {
-  const currentYear = new Date().getFullYear();
+export function Footer() {
+  const year = new Date().getFullYear();
 
   return (
-    <footer className="bg-blue-900 text-gray-300">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          <div className="space-y-4">
-            <div className="flex items-center space-x-3">
-              <div className="relative w-10 h-10">
-                <svg viewBox="0 0 100 100" className="w-full h-full" fill="none">
-                  <circle cx="50" cy="50" r="45" className="fill-blue-900"/>
-                  <circle cx="50" cy="50" r="40" className="fill-white"/>
-                  <polygon points="50,25 65,45 35,45" className="fill-blue-900"/>
-                  <polygon points="50,75 35,55 65,55" className="fill-gray-500"/>
-                </svg>
-              </div>
-              <div>
-                <span className="text-xl font-bold text-white">Verden</span>
-                <span className="text-xs text-gray-400 block leading-tight">
-                  Engineering
-                </span>
-              </div>
-            </div>
-            <p className="text-sm text-gray-400">
-              Multi-domain engineering solutions delivering excellence across
-              diverse industries and sectors.
-            </p>
-            <div className="flex space-x-4">
-              <a
-                href="https://linkedin.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-blue-300 transition-colors"
-              >
-                <Linkedin className="w-5 h-5" />
-              </a>
-              <a
-                href="https://facebook.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-blue-300 transition-colors"
-              >
-                <Facebook className="w-5 h-5" />
-              </a>
-              <a
-                href="https://instagram.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-blue-300 transition-colors"
-              >
-                <Instagram className="w-5 h-5" />
-              </a>
-            </div>
-          </div>
-
-          <div>
-            <h3 className="text-white font-semibold mb-4">Quick Links</h3>
-            <ul className="space-y-2">
-              <li>
-                <Link
-                  href="/"
-                  className="text-sm hover:text-blue-300 transition-colors"
-                >
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/about"
-                  className="text-sm hover:text-blue-300 transition-colors"
-                >
-                  About Us
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/services"
-                  className="text-sm hover:text-blue-300 transition-colors"
-                >
-                  Services
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/products"
-                  className="text-sm hover:text-blue-300 transition-colors"
-                >
-                  Products
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/projects"
-                  className="text-sm hover:text-blue-300 transition-colors"
-                >
-                  Projects
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/contact"
-                  className="text-sm hover:text-blue-300 transition-colors"
-                >
-                  Contact
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <h3 className="text-white font-semibold mb-4">Services</h3>
-            <ul className="space-y-2 text-sm">
-              <li className="hover:text-blue-300 transition-colors cursor-pointer">
-                Infrastructure
-              </li>
-              <li className="hover:text-blue-300 transition-colors cursor-pointer">
-                Energy Solutions
-              </li>
-              <li className="hover:text-blue-300 transition-colors cursor-pointer">
-                Industrial
-              </li>
-              <li className="hover:text-blue-300 transition-colors cursor-pointer">
-                Consultancy
-              </li>
-              <li className="hover:text-blue-300 transition-colors cursor-pointer">
-                Project Management
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <h3 className="text-white font-semibold mb-4">Contact Info</h3>
-            <ul className="space-y-3">
-              <li className="flex items-start space-x-3">
-                <MapPin className="w-5 h-5 text-blue-300 flex-shrink-0 mt-0.5" />
-                <span className="text-sm">
-                  123 Engineering Plaza, Business District
-                </span>
-              </li>
-              <li className="flex items-start space-x-3">
-                <Phone className="w-5 h-5 text-blue-300 flex-shrink-0 mt-0.5" />
-                <span className="text-sm">+1 (555) 123-4567</span>
-              </li>
-              <li className="flex items-start space-x-3">
-                <Mail className="w-5 h-5 text-blue-300 flex-shrink-0 mt-0.5" />
-                <span className="text-sm">info@verdenengineering.com</span>
-              </li>
-            </ul>
-          </div>
+    <footer className="bg-navy text-mist">
+      <div className="mx-auto grid max-w-site gap-12 px-5 py-16 md:grid-cols-3 md:px-8">
+        <div>
+          <p className="font-display text-lg font-semibold tracking-tight text-white">{siteConfig.name}</p>
+          <p className="mt-4 max-w-xs text-sm leading-relaxed text-mist/80">{siteConfig.footer.blurb}</p>
+          <nav aria-label="Footer" className="mt-6 flex flex-col gap-2">
+            <Link href={siteConfig.navigation.about.href} className="text-sm text-mist hover:text-white">
+              {siteConfig.navigation.about.label}
+            </Link>
+            <Link href={siteConfig.navigation.partners.href} className="text-sm text-mist hover:text-white">
+              {siteConfig.navigation.partners.label}
+            </Link>
+            <Link href={siteConfig.navigation.contact.href} className="text-sm text-mist hover:text-white">
+              {siteConfig.navigation.contact.label}
+            </Link>
+          </nav>
         </div>
 
-        <div className="border-t border-blue-800 mt-12 pt-8 text-center text-sm">
+        <div>
+          <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-accent">{siteConfig.footer.servicesTitle}</p>
+          <ul className="mt-4 space-y-2">
+            {services.map((service) => (
+              <li key={service.slug}>
+                <Link href={service.href} className="text-sm text-mist hover:text-white">
+                  {service.navLabel}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div>
+          <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-accent">{siteConfig.footer.contactTitle}</p>
+          <ul className="mt-4 space-y-2 text-sm text-mist">
+            <li>{siteConfig.contact.email}</li>
+            <li>{siteConfig.contact.phone}</li>
+            <li>{siteConfig.contact.address}</li>
+            <li className="pt-2 text-mist/70">{siteConfig.contact.registration}</li>
+          </ul>
+        </div>
+      </div>
+
+      <div className="border-t border-white/10">
+        <div className="mx-auto flex max-w-site flex-col gap-4 px-5 py-6 text-sm text-mist/80 md:flex-row md:items-center md:justify-between md:px-8">
           <p>
-            &copy; {currentYear} Verden Engineering (Private) Limited. All
-            rights reserved.
+            {siteConfig.footer.partnerLine}{" "}
+            {partners.map((partner, index) => (
+              <span key={partner.key}>
+                {index > 0 ? " · " : null}
+                <a href={partner.website} target="_blank" rel="noopener noreferrer" className="text-white hover:text-accent">
+                  {partner.name}
+                </a>{" "}
+                <span className="text-mist/60">({partner.countryCode})</span>
+              </span>
+            ))}
           </p>
+          <nav aria-label="Legal" className="flex gap-5">
+            {siteConfig.legalNav.map((item) => (
+              <Link key={item.href} href={item.href} className="hover:text-white">
+                {item.label}
+              </Link>
+            ))}
+          </nav>
+          <p>© {year} {siteConfig.name}</p>
         </div>
       </div>
     </footer>

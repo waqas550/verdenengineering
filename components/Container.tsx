@@ -1,0 +1,12 @@
+import type { ReactNode } from "react";
+import { cx } from "@/lib/cx";
+
+export function Container({
+  children,
+  className,
+}: {
+  children: ReactNode;
+  className?: string;
+}) {
+  return <div className={cx("mx-auto w-full max-w-site px-5 md:px-8", className)}>{children}</div>;
+}
